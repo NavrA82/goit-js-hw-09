@@ -29,8 +29,8 @@ ul {
 }
 
 .list-item {
-  max-width: 220px;
-  width: 250px;
+  max-width: 200px;
+  width: 220px;
   background-color: #4d5ae5;
   border: 2px solid #fafafad2;
   border-radius: 5px;
@@ -38,7 +38,7 @@ ul {
   text-align: center;
 }
 .list-item-link {
-  padding: 0 40px;
+  padding: 0 20px;
   text-decoration: none;
   color: #fafafad2;
 }
