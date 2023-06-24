@@ -10,7 +10,9 @@ const ref = {
   valueHours: document.querySelector('[data-hours]'),
   valueMinutes: document.querySelector('[data-minutes]'),
   valueSeconds: document.querySelector('[data-seconds]'),
-  nameText: document.querySelectorAll('.field'),
+  field: document.querySelectorAll('.field'),
+  value: document.querySelectorAll('.value'),
+  label: document.querySelectorAll('.label'),
 };
 
 const newParagraph = document.createElement('p');
@@ -27,8 +29,17 @@ ref.input.style.cssText = `background-color: #08aa31c2; font-size: large; color:
 ref.buttonStart.style.cssText = `background-color: rgba(239, 239, 239, 0.3); font-size: large; color: rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3); padding: 20px 40px; border: 2px solid rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3); border-radius: 8px; `;
 ref.buttonStart.disabled = true;
 console.log(ref.nameText);
-// (...ref.nameText).style.cssText = `background-color: #08aa31c2; font-size: large; color: #f6c218; padding: 12px 4px; border: 2px solid #f6c218; border-radius: 8px;  text-align: center; font-weight: 900; font-size: 28px; outline: none; width: 308px;`;
 
+ref.field.forEach(element => {
+  element.style.cssText = `background-color: #08aa31c2; font-size: 28px; color: #f6c218; padding: 0; border: 2px solid #f6c218; border-radius: 8px;  text-align: center; font-weight: 700; outline: none; width: 148px; display: flex; align-items: center;
+flex-direction: column;`;
+});
+ref.value.forEach(element => {
+  element.style.cssText = `background-color: #08aa31c2; font-size: 40px; color: #212121; padding: 0;  text-align: center; font-weight: 900;`;
+});
+ref.label.forEach(element => {
+  element.style.cssText = `background-color: #08aa31c2; color: #f6c218; padding: 0; text-align: center; font-weight: 600; font-size: 28px;`;
+});
 const options = {
   enableTime: true,
   time_24hr: true,
