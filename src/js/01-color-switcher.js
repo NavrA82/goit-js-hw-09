@@ -9,7 +9,7 @@ let intervalId = null;
 ref.buttonStart.style.cssText = `background-color: #4d5ae5; font-size: large; color: #44cc1a; padding: 20px 40px; border: 2px solid #44cc1a; border-radius: 8px; cursor: pointer;`;
 ref.buttonStop.style.cssText = `background-color: #4d5ae5; font-size: large; color: #f6c218; padding: 20px 40px; border: 2px solid #f6c218;  border-radius: 8px; cursor: pointer;`;
 
-ref.bodyView.style.cssText = `background-color: ${getRandomHexColor()}; display: flex; gap: 20px; align-items: center;
+ref.bodyView.style.cssText = `background-color: #a9a8a8; display: flex; gap: 20px; align-items: center;
 flex-direction: column;`;
 
 ref.buttonStart.addEventListener('click', () => {
