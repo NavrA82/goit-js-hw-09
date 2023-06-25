@@ -10,6 +10,7 @@ const ref = {
   valueHours: document.querySelector('[data-hours]'),
   valueMinutes: document.querySelector('[data-minutes]'),
   valueSeconds: document.querySelector('[data-seconds]'),
+  timer: document.querySelector('.timer'),
   field: document.querySelectorAll('.field'),
   value: document.querySelectorAll('.value'),
   label: document.querySelectorAll('.label'),
@@ -21,13 +22,20 @@ newParagraph.textContent =
 ref.input.insertAdjacentElement('beforebegin', newParagraph);
 ref.input.previousSibling.style.cssText = `background-color: #e42525cd;  font-weight: 900; color: #f6c218; padding: 8px 4px; border: 2px solid #f6c218; border-radius: 8px; text-align: center;  font-size: 16px; width: 308px;`;
 
+const buttonReset = document.createElement('button');
+buttonReset.textContent = 'Reset';
+ref.buttonStart.insertAdjacentElement('afterend', buttonReset);
+buttonReset.style.cssText = `display: none;`;
+
 ref.bodyView.style.cssText = `background-color: #a9a8a8; display: flex; gap: 20px; align-items: center;
 flex-direction: column;`;
 
 ref.input.style.cssText = `background-color: #08aa31c2; font-size: large; color: #f6c218; padding: 12px 4px; border: 2px solid #f6c218; border-radius: 8px;  text-align: center; font-weight: 900; font-size: 28px; outline: none; width: 308px;`;
 
-ref.buttonStart.style.cssText = `background-color: rgba(239, 239, 239, 0.3); font-size: large; color: rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3); padding: 20px 40px; border: 2px solid rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3); border-radius: 8px; `;
+ref.buttonStart.style.cssText = `background-color: rgba(239, 239, 239, 0.3); font-size: large; color: rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3); padding: 20px 40px; border: 2px solid rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3); border-radius: 8px; width: 128px;`;
 ref.buttonStart.disabled = true;
+
+ref.timer.style.cssText = `display: flex; gap: 16px; margin-top: 240px;`;
 
 ref.field.forEach(element => {
   element.style.cssText = `background-color: #08aa31c2; font-size: 28px; color: #f6c218; padding: 0; border: 2px solid #f6c218; border-radius: 8px;  text-align: center; font-weight: 700; outline: none; width: 148px; display: flex; align-items: center;
@@ -46,19 +54,22 @@ const options = {
   minuteIncrement: 1,
   onClose(selectedDates) {
     let ms = selectedDates[0] - options.defaultDate;
-    ref.buttonStart.disabled = true;
-
     if (ms <= 0) {
       // window.alert('Please choose a date in the future');
       Report.warning(
         'Please choose a date in the future.',
-        'It seems that you are from the country where the cruiser "Moscow" sank.'
+        'It seems that you are from the country where the cruiser "Moscow" sank.',
+        'Ok i will be more careful'
       );
     } else {
       ref.buttonStart.disabled = false;
-      ref.buttonStart.style.cssText = `background-color: #08aa31c2; font-size: large; color: #f6c218; padding: 20px 40px; border: 2px solid #f6c218; border-radius: 8px; cursor: pointer;`;
+      ref.buttonStart.style.cssText = `background-color: #08aa31c2; font-size: large; color: #f6c218; padding: 20px 40px; border: 2px solid #f6c218; border-radius: 8px; cursor: pointer; width: 128px;`;
 
       ref.buttonStart.addEventListener('click', () => {
+        ref.buttonStart.style.cssText = `display: none;`;
+        buttonReset.style.cssText = `background-color: #e42525cd; font-size: large; color: #f6c218; padding: 20px 40px; border: 2px solid #f6c218; border-radius: 8px; cursor: pointer; width: 128px;`;
+        ref.input.disabled = true;
+
         setInterval(() => {
           ms = ms - 1000;
 
@@ -82,6 +93,11 @@ const options = {
 };
 
 flatpickr('#date-time-picker', options);
+console.log(buttonReset.style.cssText);
+
+buttonReset.addEventListener('click', () => {
+  location.reload();
+});
 
 function convertMs(ms) {
   const second = 1000;
@@ -97,6 +113,7 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
+// інший варіант функції вираховування відліку часу
 // function getTimeComponents(time) {
 //   const days = Math.floor(
 //     (time % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24)

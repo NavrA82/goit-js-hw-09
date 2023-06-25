@@ -15,6 +15,8 @@ ref.bodyView.style.cssText = `background-color: #a9a8a8; display: flex; gap: 20p
 flex-direction: column;`;
 
 ref.buttonStart.addEventListener('click', () => {
+  // audio.play();
+
   intervalId = setInterval(() => {
     ref.bodyView.style.cssText = `background-color: ${getRandomHexColor()}; display: flex; gap: 20px; align-items: center;
 flex-direction: column;`;
@@ -30,6 +32,8 @@ flex-direction: column;`;
 ref.buttonStop.addEventListener('click', () => {
   clearInterval(intervalId);
 
+  // audio.pause();
+
   ref.buttonStart.disabled = false;
   ref.buttonStop.disabled = true;
 
@@ -42,3 +46,14 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
+
+// const audioMarkUp = /*html*/ `<audio src="/goit-js-hw-09/next-level.mp3" class="audio" id="audio-player" controls type="audio/mpeg"></audio>`;
+
+// ref.buttonStop.insertAdjacentHTML('afterend', audioMarkUp);
+// const audio = new Audio('/goit-js-hw-09/next-level.mp3');
+
+// const audio = document.querySelector('#audio-player');
+// console.log(audio);
+// console.dir(audio);
+
+// console.log(ref.bodyView);
