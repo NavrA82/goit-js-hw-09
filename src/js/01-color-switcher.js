@@ -7,7 +7,7 @@ const ref = {
 let intervalId = null;
 
 ref.buttonStart.style.cssText = `background-color: #08aa31c2; font-size: large; color: #f6c218; padding: 20px 40px; border: 2px solid #f6c218; border-radius: 8px; cursor: pointer;`;
-ref.buttonStop.style.cssText = `background-color: #e42525cd; font-size: large; color: #f6c218; padding: 20px 40px; border: 2px solid #f6c218;  border-radius: 8px; cursor: pointer;`;
+ref.buttonStop.style.cssText = `background-color: rgba(239, 239, 239, 0.3); font-size: large; color:  rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3); padding: 20px 40px; border: 2px solid rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3);  border-radius: 8px;`;
 
 ref.buttonStop.disabled = true;
 
