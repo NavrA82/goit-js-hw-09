@@ -20,7 +20,7 @@ const newParagraph = document.createElement('p');
 newParagraph.textContent =
   'SELECT A FUTURE DATE AND TIME TO START THE COUNTDOWN';
 ref.input.insertAdjacentElement('beforebegin', newParagraph);
-ref.input.previousSibling.style.cssText = `background-color: #e42525cd;  font-weight: 900; color: #f6c218; padding: 8px 4px; border: 2px solid #f6c218; border-radius: 8px; text-align: center;  font-size: 16px; width: 308px;`;
+ref.input.previousSibling.style.cssText = `background-color: #e42525cd;  font-weight: 900; color: #f6c218; padding: 8px 4px; border: 2px solid #f6c218; border-radius: 8px; text-align: center;  font-size: 16px; width: 308px; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;`;
 
 const buttonReset = document.createElement('button');
 buttonReset.textContent = 'Reset';
@@ -35,18 +35,21 @@ ref.input.style.cssText = `background-color: #08aa31c2; font-size: large; color:
 ref.buttonStart.style.cssText = `background-color: rgba(239, 239, 239, 0.3); font-size: large; color: rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3); padding: 20px 40px; border: 2px solid rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3); border-radius: 8px; width: 128px;`;
 ref.buttonStart.disabled = true;
 
-ref.timer.style.cssText = `display: flex; gap: 16px; margin-top: 240px;`;
+ref.timer.style.cssText = `display: flex; gap: 8px; margin-top: 240px; `;
 
 ref.field.forEach(element => {
-  element.style.cssText = `background-color: #08aa31c2; font-size: 28px; color: #f6c218; padding: 0; border: 2px solid #f6c218; border-radius: 8px;  text-align: center; font-weight: 700; outline: none; width: 148px; display: flex; align-items: center;
-flex-direction: column;`;
+  element.style.cssText = `background-color: #08aa31c2; color: #f6c218; padding: 0; border: 2px solid #f6c218; border-radius: 8px;  text-align: center; outline: none; width: 84px; display: flex; align-items: center; justify-content: center;
+flex-direction: column; box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;`;
 });
+
 ref.value.forEach(element => {
-  element.style.cssText = `background-color: #08aa31c2; font-size: 40px; color: #212121; padding: 0;  text-align: center; font-weight: 900;`;
+  element.style.cssText = `background-color: #08aa31c2; font-size: 28px; color: #212121; padding: 0;  text-align: center; font-weight: 700;`;
 });
+
 ref.label.forEach(element => {
-  element.style.cssText = `background-color: #08aa31c2; color: #f6c218; padding: 0; text-align: center; font-weight: 600; font-size: 28px;`;
+  element.style.cssText = `background-color: #08aa31c2; color: #f6c218; padding: 0; text-align: center; font-weight: 400; font-size: 16px;`;
 });
+
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -54,6 +57,7 @@ const options = {
   minuteIncrement: 1,
   onClose(selectedDates) {
     let ms = selectedDates[0] - options.defaultDate;
+
     if (ms <= 0) {
       // window.alert('Please choose a date in the future');
       Report.warning(
