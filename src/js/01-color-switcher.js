@@ -9,6 +9,8 @@ let intervalId = null;
 ref.buttonStart.style.cssText = `background-color: #08aa31c2; font-size: large; color: #f6c218; padding: 20px 40px; border: 2px solid #f6c218; border-radius: 8px; cursor: pointer;`;
 ref.buttonStop.style.cssText = `background-color: #e42525cd; font-size: large; color: #f6c218; padding: 20px 40px; border: 2px solid #f6c218;  border-radius: 8px; cursor: pointer;`;
 
+ref.buttonStop.disabled = true;
+
 ref.bodyView.style.cssText = `background-color: #a9a8a8; display: flex; gap: 20px; align-items: center;
 flex-direction: column;`;
 

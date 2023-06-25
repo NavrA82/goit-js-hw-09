@@ -28,7 +28,6 @@ ref.input.style.cssText = `background-color: #08aa31c2; font-size: large; color:
 
 ref.buttonStart.style.cssText = `background-color: rgba(239, 239, 239, 0.3); font-size: large; color: rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3); padding: 20px 40px; border: 2px solid rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3); border-radius: 8px; `;
 ref.buttonStart.disabled = true;
-console.log(ref.nameText);
 
 ref.field.forEach(element => {
   element.style.cssText = `background-color: #08aa31c2; font-size: 28px; color: #f6c218; padding: 0; border: 2px solid #f6c218; border-radius: 8px;  text-align: center; font-weight: 700; outline: none; width: 148px; display: flex; align-items: center;
