@@ -58,8 +58,8 @@ const options = {
       // window.alert('Please choose a date in the future');
       Report.warning(
         'Please choose a date in the future.',
-        'It seems that you are from the country where the cruiser "Moscow" sank.',
-        'Ok i will be more careful'
+        'It seems, that you are from the country where the cruiser "Moscow" sank.',
+        'Sorry, I will be more careful'
       );
     } else {
       ref.buttonStart.disabled = false;
