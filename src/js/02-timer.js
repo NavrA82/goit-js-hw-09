@@ -39,7 +39,7 @@ ref.timer.style.cssText = `display: flex; gap: 8px; margin-top: 240px; `;
 
 ref.field.forEach(element => {
   element.style.cssText = `background-color: #08aa31c2; color: #f6c218; padding: 0; border: 2px solid #f6c218; border-radius: 8px;  text-align: center; outline: none; width: 84px; display: flex; align-items: center; justify-content: center;
-flex-direction: column; box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;`;
+flex-direction: column;  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;`;
 });
 
 ref.value.forEach(element => {
