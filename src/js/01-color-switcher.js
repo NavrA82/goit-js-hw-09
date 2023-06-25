@@ -2,6 +2,7 @@ const ref = {
   buttonStart: document.querySelector('[data-start]'),
   buttonStop: document.querySelector('[data-stop]'),
   bodyView: document.querySelector('body'),
+  audioPlayer: document.querySelector('#audio-player'),
 };
 
 let intervalId = null;
@@ -14,8 +15,12 @@ ref.buttonStop.disabled = true;
 ref.bodyView.style.cssText = `background-color: #a9a8a8; display: flex; gap: 20px; align-items: center;
 flex-direction: column;`;
 
+ref.audioPlayer.style.cssText = `opacity: 0;`;
+
+ref.audioPlayer.volume = 0.2;
+
 ref.buttonStart.addEventListener('click', () => {
-  // audio.play();
+  ref.audioPlayer.play();
 
   intervalId = setInterval(() => {
     ref.bodyView.style.cssText = `background-color: ${getRandomHexColor()}; display: flex; gap: 20px; align-items: center;
@@ -32,7 +37,7 @@ flex-direction: column;`;
 ref.buttonStop.addEventListener('click', () => {
   clearInterval(intervalId);
 
-  // audio.pause();
+  ref.audioPlayer.pause();
 
   ref.buttonStart.disabled = false;
   ref.buttonStop.disabled = true;
@@ -46,14 +51,3 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
-
-// const audioMarkUp = /*html*/ `<audio src="/goit-js-hw-09/next-level.mp3" class="audio" id="audio-player" controls type="audio/mpeg"></audio>`;
-
-// ref.buttonStop.insertAdjacentHTML('afterend', audioMarkUp);
-// const audio = new Audio('/goit-js-hw-09/next-level.mp3');
-
-// const audio = document.querySelector('#audio-player');
-// console.log(audio);
-// console.dir(audio);
-
-// console.log(ref.bodyView);
