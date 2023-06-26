@@ -136,7 +136,7 @@ const options = {
             messageColor: '#f6c218',
             buttonBackground: '#08aa31c2',
             buttonColor: '#f6c218',
-            backOverlayColor: 'rgba(238,191,49,0.5)',
+            backOverlayColor: 'rgba(238,191,49,0.9)',
           },
         }
       );
