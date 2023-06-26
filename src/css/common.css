@@ -61,7 +61,7 @@ span.flatpickr-day.selected {
   -webkit-box-shadow: none;
   box-shadow: none;
   color: #f6c218;
-  background: #08aa31c2;
+  background-color: #08aa31c2;
   border-color: #f6c218;
 }
 .flatpickr-time input.flatpickr-hour.selected,
@@ -70,6 +70,11 @@ span.flatpickr-day.selected {
 .flatpickr-time input.flatpickr-hour,
 .flatpickr-time input.flatpickr-minute,
 .flatpickr-time input.flatpickr-second {
-  color: #08aa31c2;
+  color: #f6c218;
   font-weight: 400;
+  background: #08aa31c2;
+}
+
+span.flatpickr-weekday {
+  color: #08aa31c2;
 }
