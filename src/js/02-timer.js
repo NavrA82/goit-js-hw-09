@@ -1,6 +1,6 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
-import { Report } from 'notiflix/build/notiflix-report-aio';
+import Notiflix from 'notiflix';
 
 const ref = {
   bodyView: document.querySelector('body'),
@@ -60,10 +60,21 @@ const options = {
 
     if (ms <= 0) {
       // window.alert('Please choose a date in the future');
-      Report.warning(
+      Notiflix.Report.warning(
         'Please choose a date in the future.',
         'It seems, that you are from the country where the cruiser "Moscow" sank.',
-        'Sorry, I will be more careful'
+        'Sorry, I will be more careful',
+        {
+          width: '320px',
+          svgSize: '30px',
+          cssAnimationStyle: 'zoom',
+          messageFontSize: '16px',
+          backgroundColor: '#08aa31c2',
+          messageColor: '#F6C31C',
+          // messageColor: '#f6c218',
+          buttonBackground: '#e42525',
+          buttonColor: '#f6c218',
+        }
       );
     } else {
       ref.buttonStart.disabled = false;
