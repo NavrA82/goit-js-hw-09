@@ -19,7 +19,7 @@ ref.button.style.cssText = `background-color: #08aa31c2; font-size: large; color
 ref.form.style.cssText = `padding: 20px 40px; border: 2px solid #f6c218; border-radius: 8px; display: flex; gap: 20px; align-items: center;
 flex-direction: column; max-width: 320px; width: 80%; background-color: #3d8c6a; border-radius: 10px; flex-direction: column; align-items: center; gap: 20px; margin-top: 10vh; padding: 20px;`;
 
-ref.bodyView.style.cssText = `background-color: #a9a8a8; display: flex; gap: 20px; align-items: center; flex-direction: column;`;
+ref.bodyView.style.cssText = `background-color: rgba(238,191,49,0.5); display: flex; gap: 20px; align-items: center; flex-direction: column;`;
 
 Notify.success('Sol lucet omnibus');
 Notify.failure('Qui timide rogat docet negare');

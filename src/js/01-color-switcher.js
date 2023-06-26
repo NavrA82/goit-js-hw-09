@@ -12,7 +12,7 @@ ref.buttonStop.style.cssText = `background-color: rgba(239, 239, 239, 0.3); font
 
 ref.buttonStop.disabled = true;
 
-ref.bodyView.style.cssText = `background-color: #a9a8a8; display: flex; gap: 20px; align-items: center;
+ref.bodyView.style.cssText = `background-color: rgba(238,191,49,0.5); display: flex; gap: 20px; align-items: center;
 flex-direction: column;`;
 
 ref.audioPlayer.style.cssText = `opacity: 0;`;
