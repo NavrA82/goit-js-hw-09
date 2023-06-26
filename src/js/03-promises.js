@@ -6,9 +6,6 @@ const ref = {
   button: document.querySelector('button'),
   label: document.querySelectorAll('label'),
   input: document.querySelectorAll('input'),
-  // inputDelay: document.querySelector('input[name="delay"]'),
-  // inputStep: document.querySelector('input[name="step"]'),
-  // inputAmount: document.querySelector('input[name="amount"]'),
 };
 
 ref.label.forEach(element => {
@@ -19,6 +16,7 @@ ref.label.forEach(element => {
   color: #f6c218; 
   font-size: 20px;`;
 });
+
 ref.input.forEach(element => {
   element.style.cssText = `    
   width: 100%;
@@ -29,8 +27,9 @@ ref.input.forEach(element => {
   padding: 10px;
   font-weight: 900;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-}`;
+  }`;
 });
+
 ref.button.style.cssText = `
   background-color: #08aa31c2; 
   font-size: large; 
@@ -73,17 +72,21 @@ function onFormSubmit(event) {
     step: Number(ref.form.step.value),
     amount: ref.form.amount.value,
   };
+
   let delay = formData.delay;
+
   for (let i = 0; i < formData.amount; i++) {
     createPromise(formData.delay, delay)
       .then(({ position, delay }) => {
         Notify.success(`Fulfilled promise ${position} in ${delay}ms`);
         //console.log(`✅ Fulfilled promise ${position} in ${delay}ms`
       })
+
       .catch(({ position, delay }) => {
         Notify.failure(`Rejected promise ${position} in ${delay}ms`);
         //console.log(`❌ Rejected promise ${position} in ${delay}ms`);
       });
+
     delay += formData.step;
   }
   ref.form.reset();
@@ -92,6 +95,7 @@ function onFormSubmit(event) {
 function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
     const shouldResolve = Math.random() > 0.3;
+
     setTimeout(() => {
       if (shouldResolve) {
         resolve({ position, delay });
