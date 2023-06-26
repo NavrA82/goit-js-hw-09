@@ -29,7 +29,7 @@ buttonReset.style.cssText = `display: none;`;
 
 ref.bodyView.style.cssText = `background-color: rgba(238,191,49,0.5); display: flex; gap: 20px; align-items: center; flex-direction: column;`;
 
-ref.input.style.cssText = `background-color: #08aa31c2; font-size: large; color: #f6c218; padding: 12px 4px; border: 2px solid #f6c218; border-radius: 8px;  text-align: center; font-weight: 900; font-size: 24px; outline: none; max-width: 308px;`;
+ref.input.style.cssText = `background-color: #08aa31; font-size: large; color: #f6c218; padding: 12px 4px; border: 2px solid #f6c218; border-radius: 8px;  text-align: center; font-weight: 900; font-size: 24px; outline: none; max-width: 308px;`;
 
 ref.buttonStart.style.cssText = `background-color: rgba(239, 239, 239, 0.3); font-size: large; color: rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3); padding: 20px 40px; border: 2px solid rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3); border-radius: 8px; width: 128px; box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;`;
 ref.buttonStart.disabled = true;
@@ -37,7 +37,7 @@ ref.buttonStart.disabled = true;
 ref.timer.style.cssText = `display: flex; flex-wrap: wrap; gap: 4px; margin-top: 40px; justify-content: center;`;
 
 ref.field.forEach(element => {
-  element.style.cssText = `background-color: #08aa31c2; color: #f6c218; padding: 0; border: 2px solid #f6c218; border-radius: 8px;  text-align: center; outline: none; width: 72px; display: flex; align-items: center; justify-content: center;
+  element.style.cssText = `background-color: #08aa31; color: #f6c218; padding: 0; border: 2px solid #f6c218; border-radius: 8px;  text-align: center; width: 72px; display: flex; align-items: center; justify-content: center;
 flex-direction: column;  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;`;
 });
 
