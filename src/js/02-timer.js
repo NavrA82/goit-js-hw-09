@@ -60,6 +60,7 @@ const options = {
 
     if (ms <= 0) {
       // window.alert('Please choose a date in the future');
+
       Notiflix.Report.warning(
         'Please choose a date in the future.',
         'It seems, that you are from the country where the cruiser "Moscow" sank.',
@@ -67,13 +68,20 @@ const options = {
         {
           width: '320px',
           svgSize: '30px',
-          cssAnimationStyle: 'zoom',
+          // cssAnimationStyle: 'zoom',
           messageFontSize: '16px',
-          backgroundColor: '#08aa31c2',
-          messageColor: '#F6C31C',
+          backgroundColor: '#e42525cd',
+          messageColor: '#000000',
           // messageColor: '#f6c218',
           buttonBackground: '#e42525',
           buttonColor: '#f6c218',
+          warning: {
+            svgColor: '#eebf31',
+            titleColor: '#f6c218',
+            messageColor: '#f6c218',
+            buttonBackground: '#08aa31c2',
+            buttonColor: '#f6c218',
+          },
         }
       );
     } else {
