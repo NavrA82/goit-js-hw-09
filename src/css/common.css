@@ -57,6 +57,14 @@ ul {
   color: #ffffff;
 }
 
+span.flatpickr-day.selected:hover {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #f6c218;
+  background-color: #0b7325;
+  border-color: #f6c218;
+}
+
 span.flatpickr-day.selected {
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -70,9 +78,9 @@ span.flatpickr-day.selected {
 .flatpickr-time input.flatpickr-hour,
 .flatpickr-time input.flatpickr-minute,
 .flatpickr-time input.flatpickr-second {
-  color: #08aa31;
+  color: #f6c218;
   font-weight: 400;
-  /* background: #08aa31; */
+  background: #08aa31;
 }
 
 span.flatpickr-weekday {
