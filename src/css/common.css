@@ -56,3 +56,20 @@ ul {
   border-color: #404bbf;
   color: #ffffff;
 }
+
+span.flatpickr-day.selected {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #f6c218;
+  background: #08aa31c2;
+  border-color: #f6c218;
+}
+.flatpickr-time input.flatpickr-hour.selected,
+.flatpickr-time input.flatpickr-minute.selected,
+.flatpickr-time input.flatpickr-second.selected,
+.flatpickr-time input.flatpickr-hour,
+.flatpickr-time input.flatpickr-minute,
+.flatpickr-time input.flatpickr-second {
+  color: #08aa31c2;
+  font-weight: 400;
+}
