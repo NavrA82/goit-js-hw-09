@@ -55,6 +55,7 @@ const options = {
   time_24hr: true,
   defaultDate: new Date(),
   minuteIncrement: 1,
+  disableMobile: 'true',
   onClose(selectedDates) {
     let ms = selectedDates[0] - options.defaultDate;
 
