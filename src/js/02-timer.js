@@ -21,16 +21,17 @@ newParagraph.textContent =
   'SELECT A FUTURE DATE AND TIME TO START THE COUNTDOWN';
 ref.input.insertAdjacentElement('beforebegin', newParagraph);
 ref.input.previousSibling.style.cssText = `
-background-color: #e42525cd;  
-font-weight: 900; 
-color: #f6c218; 
-padding: 8px 4px; 
-border: 2px solid #f6c218; 
-border-radius: 8px; 
-text-align: center;  
-font-size: 16px; 
-max-width: 308px; 
-box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;`;
+  background-color: #e42525cd;  
+  font-weight: 900; 
+  color: #f6c218; 
+  padding: 8px 4px; 
+  border: 2px solid #f6c218; 
+  border-radius: 8px; 
+  text-align: center;  
+  font-size: 16px; 
+  max-width: 308px; 
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+`;
 
 const buttonReset = document.createElement('button');
 buttonReset.textContent = 'Reset';
@@ -38,42 +39,46 @@ ref.buttonStart.insertAdjacentElement('afterend', buttonReset);
 buttonReset.style.cssText = `display: none;`;
 
 ref.bodyView.style.cssText = `
-background-color: rgba(238,191,49,0.5); 
-display: flex; 
-gap: 20px; 
-align-items: 
-center; 
-flex-direction: column;`;
+  background-color: rgba(238,191,49,0.5); 
+  display: flex; 
+  gap: 20px; 
+  align-items: 
+  center; 
+  flex-direction: column;
+`;
 
 ref.input.style.cssText = `
-background-color: #08aa31; 
-font-size: large; 
-color: #f6c218; 
-padding: 12px 4px; 
-border: 2px solid #f6c218; 
-border-radius: 8px;  
-text-align: center; 
-font-weight: 900; 
-font-size: 24px; 
-max-width: 308px;`;
+  background-color: #08aa31; 
+  font-size: large; 
+  color: #f6c218; 
+  padding: 12px 4px; 
+  border: 2px solid #f6c218; 
+  border-radius: 8px;  
+  text-align: center; 
+  font-weight: 900; 
+  font-size: 24px; 
+  max-width: 308px;
+`;
 
 ref.buttonStart.style.cssText = `
-background-color: rgba(239, 239, 239, 0.3); 
-font-size: large; 
-color: rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3); 
-padding: 20px 40px; 
-border: 2px solid rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3); 
-border-radius: 8px; width: 128px; 
-box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;`;
+  background-color: rgba(239, 239, 239, 0.3); 
+  font-size: large; 
+  color: rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3); 
+  padding: 20px 40px; 
+  border: 2px solid rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3); 
+  border-radius: 8px; width: 128px; 
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+`;
 
 ref.buttonStart.disabled = true;
 
 ref.timer.style.cssText = `
-display: flex; 
-flex-wrap: wrap; 
-gap: 4px; 
-justify-content: center;
-margin-top: 40px; `;
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 4px; 
+  justify-content: center;
+  margin-top: 40px; 
+`;
 
 ref.field.forEach(element => {
   element.style.cssText = `
@@ -142,14 +147,33 @@ const options = {
       );
     } else {
       ref.buttonStart.disabled = false;
-      ref.buttonStart.style.cssText = `background-color: #08aa31c2; font-size: large; color: #f6c218; padding: 20px 40px; border: 2px solid #f6c218; border-radius: 8px; cursor: pointer; width: 128px; box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;`;
+      ref.buttonStart.style.cssText = `
+        background-color: #08aa31c2; 
+        font-size: large; 
+        color: #f6c218; 
+        padding: 20px 40px; 
+        border: 2px solid #f6c218; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        width: 128px; 
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      `;
 
       ref.buttonStart.addEventListener('click', () => {
         ref.buttonStart.style.cssText = `display: none;`;
-        buttonReset.style.cssText = `background-color: #e42525cd; font-size: large; color: #f6c218; padding: 20px 40px; border: 2px solid #f6c218; border-radius: 8px; cursor: pointer; width: 128px; box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;`;
+        buttonReset.style.cssText = `
+          background-color: #e42525cd; 
+          font-size: large; 
+          color: #f6c218; 
+          padding: 20px 40px; 
+          border: 2px solid #f6c218; 
+          border-radius: 8px; cursor: 
+          pointer; width: 128px; 
+          box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        `;
         ref.input.disabled = true;
 
-        setInterval(() => {
+        const intervalId = setInterval(() => {
           ms = ms - 1000;
 
           function addLeadingZero(value) {
@@ -165,6 +189,27 @@ const options = {
           ref.valueMinutes.textContent = addLeadingZero(timeComponents.minutes);
 
           ref.valueSeconds.textContent = addLeadingZero(timeComponents.seconds);
+
+          if (
+            ref.valueDays.textContent === '00' &&
+            ref.valueHours.textContent === '00' &&
+            ref.valueMinutes.textContent === '00' &&
+            ref.valueSeconds.textContent === '00'
+          ) {
+            clearInterval(intervalId);
+            buttonReset.style.cssText = `display: none;`;
+            ref.input.disabled = false;
+            ref.buttonStart.style.cssText = `
+              background-color: rgba(239, 239, 239, 0.3); 
+              font-size: large; 
+              color: rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3); 
+              padding: 20px 40px; 
+              border: 2px solid rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3); 
+              border-radius: 8px; width: 128px; 
+              box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+            `;
+            ref.buttonStart.disabled = true;
+          }
         }, 1000);
       });
     }
