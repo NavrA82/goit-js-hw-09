@@ -94,61 +94,29 @@ span.flatpickr-weekday {
 div.flatpickr-calendar {
   background: #51f87be6;
 }
-/* .flatpickr-months .flatpickr-month {
-  color: #000000e6;
-  fill: #000000e6;
-  height: 34px;
-  text-align: center;
-  user-select: none;
-  background: #08aa31;
-  flex: 1;
-  line-height: 1;
-  position: relative;
-  overflow: hidden;
-} */
-
-/* .numInputWrapper span:hover {
+div.flatpickr-months .flatpickr-month {
+  color: #f6c218;
+  fill: #f6c218;
   background: #08aa31;
 }
 
-.numInputWrapper span:active {
-  background: #08aa31;
-}
-.numInputWrapper:hover {
-  background: #08aa31;
-}
-.flatpickr-current-month span.cur-month:hover {
-  background: #08aa31;
+div.numInputWrapper span:hover {
+  background: #0b7325;
 }
 
-.flatpickr-current-month input.cur-year {
-  color: inherit;
-  background: #08aa31;
-} */
-/* div.flatpickr-current-month input.cur-year[disabled],
-div.flatpickr-current-month input.cur-year[disabled]:hover {
-  color: #00000080;
-  pointer-events: none;
-  background: #08aa31;
-  font-size: 100%;
-} */
-/* option.flatpickr-current-month option.flatpickr-monthDropdown-months {
-  color: inherit;
-  width: auto;
-  background: #08aa31;
-} */
+div.numInputWrapper span:active {
+  background: #0b7325;
+}
+div.numInputWrapper:hover {
+  background: #0b7325;
+}
+div.flatpickr-current-month span.cur-month:hover {
+  background: #0b7325;
+}
 
-/* div.flatpickr-current-month div.flatpickr-monthDropdown-months:hover {
-  background: #08aa31;
-} */
-
-/* select.flatpickr-current-month
-  select.flatpickr-monthDropdown-months
-  select.flatpickr-monthDropdown-month {
-  background-color: #08aa31;
-  outline: none;
-  padding: 0;
-} */
+.flatpickr-current-month select.flatpickr-monthDropdown-months:hover {
+  background: #0b7325;
+}
 
 div.flatpickr-weekdays {
   background: #08aa31;
@@ -169,4 +137,18 @@ div.flatpickr-time .flatpickr-am-pm:hover,
 div.flatpickr-time input:focus,
 div.flatpickr-time .flatpickr-am-pm:focus {
   background: #0b7325;
+}
+
+.flatpickr-months .flatpickr-prev-month:hover,
+.flatpickr-months .flatpickr-next-month:hover {
+  color: #959ea9;
+}
+.flatpickr-months .flatpickr-prev-month:hover,
+.flatpickr-months .flatpickr-next-month:hover {
+  color: #959ea9;
+}
+
+.flatpickr-months .flatpickr-prev-month:hover svg,
+.flatpickr-months .flatpickr-next-month:hover svg {
+  fill: #f64747;
 }
